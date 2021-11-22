@@ -28,7 +28,6 @@
 <!--- GOOGLE FONT USAGE  --->
 <style> div {font-family: 'Tangerine'; font-size: 40px;} </style>
 <body>
-    <div id="wrapper">
         <div id="header">
             <p>Лабораторна робота №3</p>
             <p>Стврення простої сторінки</p>
@@ -54,9 +53,32 @@
                     <source src="video/1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                     </video>
+        <!--Карусель-->
+        <div id = "hello" class="owl-carousel owl-theme">            
+        <div><img src="img/ism.png"></div>
+        <div><img src="img/politec.jpg.png"></div>
+        </div>
+        <!--Datepicker-->
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      nextText: "Наступний",
+      prevText: "Попередній",
+      dayNamesMin: [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд" ],
+      monthNames: [ "Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень" ]
+    });
+  } );
+  </script>
+  <p>Оберіть дату: <input type="text" id="datepicker"></p>
+  <br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
                 </p>
             </div>
             <div>
+
                 <p class="title">
                     ІКТА
                 </p>
@@ -82,14 +104,8 @@
             </div>
            
        </div>
-    </div>
 
-                <!--Карусель-->
-                <div class="owl-carousel owl-theme">            
-                <div><img src="img/ism.png"></div>
-                <div><img src="img/politec.jpg.png"></div>
-                </div>
-                <!--Карусель-->
+        <!--Карусель-->
     <script>
 
       $(document).ready(function(){
