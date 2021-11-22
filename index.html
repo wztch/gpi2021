@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--JQuery-->
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"> </script>
+<!--OwlCarousel-->
+<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+<script src="OwlCarousel2-2.3.4/dist/owl.carousel.js"> </script>
+<!--Accordion-->
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<link rel="stylesheet" href="js/jquery-ui.js">
 
 <!--- GOOGLE FONT  --->
 <link rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=Tangerine"> 
 
 <!--- FAV ICON  --->
-<link rel="shortcut icon" type="image/png" href="../favicon/fav.png"/>
+<link rel="shortcut icon" type="image/png" href="favicon/fav.png"/>
 <title>CSS Portal - Layout</title>
 
 <!--- INCLUDE CSS FILE  --->
-<link rel="stylesheet" type="text/css" href="../css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
+<!--- 
 <script src="https://kit.fontawesome.com/683bbe5d61.js" crossorigin="anonymous"></script>
-
+--->
 <!--- GOOGLE FONT USAGE  --->
 <style> div {font-family: 'Tangerine'; font-size: 40px;} </style>
 <body>
@@ -25,14 +35,26 @@
         </div>
         <div id="content">
             <div>
+                <!--- ПОМІНЯЙТИ ТУТ --->
+                <h3 style="text-align:center;">Зручний маршрут від вокзалу до нас</h3>
+                <iframe src="https://www.google.com.ua/maps/dir/%D0%A1%D1%82%D1%80%D0%B8%D0%B9%D1%81%D1%8C%D0%BA%D0%B8%D0%B9+%D0%BF%D0%B0%D1%80%D0%BA,+%D0%9B%D1%8C%D0%B2%D0%BE%D0%B2,+%D0%9B%D1%8C%D0%B2%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%C2%AB%D0%9B%D1%8C%D0%B2%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0%C2%BB,+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%B0+%D0%91%D0%B0%D0%BD%D0%B4%D0%B5%D1%80%D0%B8,+12,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+79000/@49.8270414,24.0089407,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x473ae78ac19b0467:0x2b2237553544c794!2m2!1d24.024981!2d49.8230219!1m5!1m1!1s0x473add7a31f0dccd:0x9869cc7025bc8e3f!2m2!1d24.0144368!2d49.8356402!3e0?hl=ru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="center"></iframe>
 
                 <!--- LINKS & IMAGES  --->
-                <p><img src="../img/politec.jpg.png" alt="politec :)" ></p>
+                <p><img src="img/politec.jpg.png" alt="politec :)" ></p>
                 <p><a href="https://lpnu.ua/">Політех!</a> </p>
-                <p><img src="../img/ism.png" alt="ISM :)"> </p>
+                <p><img src="img/ism.png" alt="ISM :)"> </p>
                 <p><a href="https://lpnu.ua/ism">Кафедра ІСМ!</a> </p>
                 <p><i class="fas fa-newspaper"></i></p>
                 <p><a href="https://lpnu.ua/news">Новиини!</a> </p>
+                <p> <audio class="videocenter" controls>
+                    <source src="audio/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <video width="1080" height="720" class="videocenter" controls>
+                    <source src="video/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </p>
             </div>
             <div>
                 <p class="title">
@@ -61,5 +83,21 @@
            
        </div>
     </div>
+
+                <!--Карусель-->
+                <div class="owl-carousel owl-theme">            
+                <div><img src="img/ism.png"></div>
+                <div><img src="img/politec.jpg.png"></div>
+                </div>
+                <!--Карусель-->
+    <script>
+
+      $(document).ready(function(){
+    
+        $('.owl-carousel').owlCarousel({loop:true});
+    
+      });
+    
+    </script>
 </body>
 </html>
